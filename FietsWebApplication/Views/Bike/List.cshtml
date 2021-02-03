@@ -1,0 +1,18 @@
+﻿@model BikesListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+@foreach (var bike in Model.Bikes)
+{
+    <div class="col-md-5 col-md-5 col-md-5 d-flex align-items-stretch">
+        <div class="thumbnail">
+            <img src="@bike.ImageThumbnailUrl" alt="" />
+            <div class="caption">
+                <h3 class="pull-right">@bike.Price.ToString("c")</h3>
+                <h3>
+                    <a>@bike.Name</a>
+                </h3>
+                <p>@bike.Description</p>
+            </div>
+        </div>
+    </div>
+}
